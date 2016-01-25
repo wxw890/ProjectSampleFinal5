@@ -189,7 +189,7 @@ function check(){
 				</td>
 				<td align=right>
 					<a href="write.board2">[글쓰기]</a>
-					<a href="javascript:list.board2">[처음으로]</a>
+					<a href="javascript:history.back()">[처음으로]</a>
 				</td>
 			</tr>
 			</table>

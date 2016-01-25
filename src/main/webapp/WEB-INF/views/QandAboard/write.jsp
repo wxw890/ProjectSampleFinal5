@@ -4,8 +4,8 @@
 
 <h2>글쓰기 페이지</h2>
 <form action="write.board2" method="post">
-	제목:<input type="text" name="b_title"/><br/><br/>
-	내용:<input type="text" cols="50" name="b_content"></textarea><br/><br/>
+	제목:<input type="text" name="b_title" style="width:500px;height:50px;"/><br/><br/>
+	내용:<textarea cols="50" name="b_content" style="width:500px;height:350px;"></textarea><br/><br/>
 	<input type="submit" value="저장"/>
 	<input type="button" value="리스트 페이지로 이동"/>
 </form>

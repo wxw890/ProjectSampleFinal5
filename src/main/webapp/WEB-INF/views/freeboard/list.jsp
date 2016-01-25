@@ -169,11 +169,11 @@ function check(){
 			<tr>
 				<td><BR><BR></td>
 			</tr>
-			<!-- 페이지 출력 -->
+			<!-- 페이지 출력 : 여기서 기존 리스트 페이지와 다르게 list.board1을 get방식으로 갈때 bool=false값을 줘야한다. -->
 			<tr>
 				<td align="left">Go to Page 
 					<%if(nowBlock > 0){ %>
-						<a href="list.board1?nowBlock=<%=nowBlock-1%>&nowPage=<%=pagePerBlock*(nowBlock-1)%>">이전 <%=pagePerBlock %>개</a>&nbsp;&nbsp;&nbsp;
+						<a href="list.board1?nowBlock=<%=nowBlock-1%>&nowPage=<%=pagePerBlock*(nowBlock-1)%>&bool=false">이전 <%=pagePerBlock %>개</a>&nbsp;&nbsp;&nbsp;
 					<%} %>
 					
 					<%
@@ -182,20 +182,20 @@ function check(){
 								break;
 							}
 					%>
-							<a href="list.board1?nowPage=<%=(nowBlock * pagePerBlock)+i%>&nowBlock=<%=nowBlock%>"><%=(nowBlock * pagePerBlock) + i+1%></a>&nbsp;&nbsp;&nbsp;
+							<a href="list.board1?nowPage=<%=(nowBlock * pagePerBlock)+i%>&nowBlock=<%=nowBlock%>&bool=false"><%=(nowBlock * pagePerBlock) + i+1%></a>&nbsp;&nbsp;&nbsp;
 					<%
 						}
 					%>
 					&nbsp;&nbsp;&nbsp;
 					<%if(totalBlock > nowBlock+1){ %>
-						<a href="list.board1?nowBlock=<%=nowBlock+1%>&nowPage=<%=pagePerBlock*(nowBlock+1)%>">다음<%=pagePerBlock %>개</a>
+						<a href="list.board1?nowBlock=<%=nowBlock+1%>&nowPage=<%=pagePerBlock*(nowBlock+1)%>&bool=false">다음<%=pagePerBlock %>개</a>
 					<%} %>
 				</td>
 				<td align=right>
 					<c:if test="${email=='admin@hta.co.kr'}">
 					<a href="write.board1">[글쓰기]</a>
 					</c:if>
-					<a href="javascript:list.board1">[처음으로]</a>
+					<a href="javascript:history.back()">[처음으로]</a>
 				</td>
 			</tr>
 			</table>

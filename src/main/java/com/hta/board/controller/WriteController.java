@@ -32,10 +32,15 @@ public class WriteController {
 		//System.out.println(dto.getB_title() +","+ dto.getB_content());
 		//String session_name = (String)session.getAttribute("name");//로그인 이름 불러오기
 		String session_email = (String)session.getAttribute("email");
-		String session_filename = (String)session.getAttribute("filename");
+		String session_filename = (String)session.getAttribute("filename");//UploadConroller.java에서 session으로 저장한 filename과 filepath를 불러온다.
 		String session_filepath = (String)session.getAttribute("filepath");
+		
 		dto.setFilename(session_filename);
 		dto.setFilepath(session_filepath);
+		
+		session.setAttribute("filename", null);//session값을 다시 null 로해줘야 이미지를 업로드를 하지 않은 글에 그전에 업로드한 이미지의 이름과 경로가 적용되지 않는다.
+		session.setAttribute("filepath", null);
+		
 		System.out.println("글번호"+dto.getB_num());
 		System.out.println("글내용"+dto.getB_count());
 		System.out.println("글타이틀"+dto.getB_title());

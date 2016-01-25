@@ -17,20 +17,22 @@
 <div align="center">
 	<h2>공지 글보기페이지</h2>
 	<table border="1">
+		<tbody>
 		<tr>
-			<td>글번호</td><td>${dto["b_num"] }</td><!-- 변수명에 _나 특수 문자가 들어있으면 dto.b_seq로 사용할수 없음, 그래서 배열형태로 가져올수밖에 없음-->
+			<td>글번호</td><td style="width:500px;height:50px;">${dto["b_num"] }</td><!-- 변수명에 _나 특수 문자가 들어있으면 dto.b_seq로 사용할수 없음, 그래서 배열형태로 가져올수밖에 없음-->
 		</tr>
 		<tr>
-			<td>제목</td><td>${dto["b_title"]}</td>
+			<td>제목</td><td style="width:500px;height:50px;">${dto["b_title"]}</td>
 		</tr>
 		<tr>
-			<td>내용</td><td>${dto["b_content"]}</td>
+			<td>내용</td><td style="width:500px;height:350px;">${dto["b_content"]}</td>
 		</tr>
 		<tr>
 			<td colspan="2" align="center">
 				<input type="button" value="목록보기" onclick="location.href='list.board1?bool=false'"> <!-- onclick에서 스크립트 언어 location.href통해 이동할수있음 -->
 			</td>
 		</tr>
+		</tbody>
 	</table>
 	</div>
 

@@ -58,6 +58,7 @@ public class ListController{
 					bool=false;//bool을 flase값을 이때 줘야 index에서 다시 listController로 가는 무한루프가 안일어난다. 즉, 한번의 실행을 위해서 필요함
 					mav2.addObject("list", list);
 					mav2.addObject("bool", bool);
+					System.out.println("index로 가는거 먹힌다.!!!!!!!!!!!!!!!!!!!!");
 					return mav2;
 				}
 			
@@ -86,7 +87,9 @@ public class ListController{
 				System.out.println("list가 null이면 실행 부탁드립니다.");
 				mav.addObject("email", session_email);
 				mav.addObject("list", null);
+				
 			}
+			
 			System.out.println("First ListController:pageHandler():" + err);
 			
 		}

@@ -18,13 +18,13 @@
 	<h2>공지 글보기페이지</h2>
 	<table border="1">
 		<tr>
-			<td>글번호</td><td>${dto["b_num"] }</td><!-- 변수명에 _나 특수 문자가 들어있으면 dto.b_seq로 사용할수 없음, 그래서 배열형태로 가져올수밖에 없음-->
+			<td>글번호</td><td style="width:500px;height:50px;">${dto["b_num"] }</td><!-- 변수명에 _나 특수 문자가 들어있으면 dto.b_seq로 사용할수 없음, 그래서 배열형태로 가져올수밖에 없음-->
 		</tr>
 		<tr>
-			<td>제목</td><td>${dto["b_title"]}</td>
+			<td>제목</td><td style="width:500px;height:50px;">${dto["b_title"]}</td>
 		</tr>
 		<tr>
-			<td>내용</td><td>${dto["b_content"]}</td>
+			<td>내용</td><td style="width:500px;height:350px;">${dto["b_content"]}</td>
 		</tr>
 		<tr>
 			<td colspan="2" align="center">

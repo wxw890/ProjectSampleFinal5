@@ -12,6 +12,12 @@ body {
    -webkit-font-smoothing: antialiased; 
    text-rendering: optimizeLegibility;
 }
+.allboard_text_td{
+	display: table-cell;
+    line-height: 1.125em;
+    width: 400px;
+    height: 300px
+}
 .text_box{
     
     margin-top: 50px;
