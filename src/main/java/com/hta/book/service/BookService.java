@@ -7,6 +7,7 @@ import org.apache.ibatis.session.RowBounds;
 
 import com.hta.board.repository.BoardDto;
 import com.hta.book.repository.BookDto;
+
 import com.hta.book.repository.BookResDto;
 import com.hta.book.repository.BookandRentalDto;
 import com.hta.book.repository.ConditionDto;
@@ -40,7 +41,7 @@ public interface BookService {
 		//å �뿩 ����Ʈ
 		public List mylist(BookandRentalDto joindto);
 		//å �ݳ�
-		public void bookreturn(int book_num,String member_email);
+		public void bookreturn(int book_num,String member_email,int rental_num);
 		//å ����
 		public void bookres(int book_num, BookResDto resdto,String member_email);
 		//å ���� ����Ʈ
@@ -48,7 +49,7 @@ public interface BookService {
 		//å ����
 		public void bookextension(int book_num);
 		//å ���� ���
-		public void bookrescancel(int book_num,String member_email);
+		public void bookrescancel(int book_num,String member_email,int res_num);
 		//������ ���� ���
 		public void bookrestodaycancel();
 		//������ �뿩 ����Ʈ
@@ -57,6 +58,8 @@ public interface BookService {
 		public List resbookList();
 		//����ڰ� å ���� �Ŀ� �뿩
 		public void bookresrental(BookDto dto, RentalInfoDto infodto, int book_num);
+		
+		public List memorylist(BookandRentalDto joindto);
 		
 
 		

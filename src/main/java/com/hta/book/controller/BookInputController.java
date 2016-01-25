@@ -42,7 +42,7 @@ public class BookInputController {
 		
 	}
 	
-	//book ����
+	//book 추가 메서드
 	@RequestMapping(value="/bookinput", method=RequestMethod.POST)
 	public String booksubmit(@ModelAttribute BookDto dto, HttpServletRequest req) throws IOException {
 		try{
@@ -52,13 +52,12 @@ public class BookInputController {
 					WebUtils.getRealPath(req.getSession().getServletContext(), "/upload");//WebUtils.getRealPath는 실제 경로를 전달해준다. 즉, upload폴더의 위치를 알아 낼수 있다.
 					*/
 			
-			String path = "F:/springWorkspace2/ProjectSampleFinal-master/src/main/webapp/images/bookimage";
-			//String path = req.getSession().getServletContext().getRealPath("/images/bookimage/");
-			
+			String path = "F:/springWorkSpace/ProjectSample2-master/src/main/webapp/upload";
 			BookImgDao uploadDao = new BookImgDao();
+	
 			uploadDao.writeFile(file, path, file.getOriginalFilename());
 			dto.setBook_img(file.getOriginalFilename());
-		
+			
 			
             try {
 				bookService.bookinput(dto);

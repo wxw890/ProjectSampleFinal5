@@ -21,10 +21,10 @@ public class BookReturnController {
 	}
 	
 	@RequestMapping(value="/return.book", method=RequestMethod.GET)
-	public String deletehandle(int book_num, HttpSession session){
+	public String returnhandle(int book_num, HttpSession session,int rental_num){
 		String member_email = (String)session.getAttribute("email");
 		
-		bookService.bookreturn(book_num,member_email);
+		bookService.bookreturn(book_num,member_email,rental_num);
 	
 		return "redirect:myrental.book";
 		

@@ -48,18 +48,23 @@ public class BookInfoController {
 		
 		List renlist = bookService.mylist(joindto);
 		List reslist = bookService.myreslist(joindto);
+		
+		int ren = renlist.size();
+		int res = reslist.size();
+	
+		mav.addObject("renlimit", ren);
+		mav.addObject("reslimit", res);
 		//대여중복처리
 		int disbook = 0;
 		for(int i=0; i<list.size(); i++){
 			for(int j=0; j<renlist.size(); j++){
 				dto = (BookDto)list.get(i);
 			
-				System.out.println("대여할 책:"+dto.getBook_title());
+				
 				String inputbook = dto.getBook_title();
 				BookandRentalDto bordto = (BookandRentalDto)renlist.get(j);
 				
 				
-				System.out.println("대여한 책:"+bordto.getBook_title());
 				String book_title = bordto.getBook_title();
 				
 				if(dto.getBook_title().equals(bordto.getBook_title())){
@@ -70,8 +75,9 @@ public class BookInfoController {
 				else{
 					disbook = 0;
 				}
-				System.out.println("대여가능한가:"+disbook);
+				
 				mav.addObject("disbook",  disbook);
+				
 			}
 		}
 		//예약 중복처리
@@ -80,12 +86,15 @@ public class BookInfoController {
 			for(int j=0; j<reslist.size(); j++){
 				dto = (BookDto)list.get(i);
 			
-				System.out.println("예약할 책:"+dto.getBook_title());
+				
 				String inputbook = dto.getBook_title();
 				BookandRentalDto bordto = (BookandRentalDto)reslist.get(j);
 				
+
 				
-				System.out.println("대여한 책:"+bordto.getBook_title());
+				
+				
+				
 				String book_title = bordto.getBook_title();
 				
 				if(dto.getBook_title().equals(bordto.getBook_title())){
@@ -96,10 +105,13 @@ public class BookInfoController {
 				else{
 					resbook = 0;
 				}
-				System.out.println("대여가능한가:"+resbook);
+				
 				mav.addObject("resbook",  resbook);
+				
 			}
 		}
+		
+		
 		
 		return mav;
 	}

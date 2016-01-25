@@ -25,7 +25,8 @@
 			<td>제목</td><td style="width:500px;height:50px;">${dto["b_title"]}</td>
 		</tr>
 		<tr>
-			<td>내용</td><td style="width:500px;height:350px;">${dto["b_content"]}</td>
+			<td>내용</td><td style="width:500px;height:350px;"><c:if test="${filename!=null}">
+			<img src="${filepath}${filename}" style="width:300px;height:300px;"><br></c:if>${dto["b_content"]}</td>
 		</tr>
 		<tr>
 			<td colspan="2" align="center">
@@ -38,10 +39,9 @@
 		</tr>
 	</table>
 	<!--<h2>뭐지??${filepath}${filename}</h2> -->
-	<c:if test="${filename!=null}">
-		<img src="${filepath}${filename}" alt="HTML5 Icon" style="width:300px;height:300px;">
-	</c:if>
+
 	</div>
+
 
 
 <%@include file="/footer.jsp"%>

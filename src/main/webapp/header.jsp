@@ -134,8 +134,8 @@ Modernizr.load({
                            <ul class="dropdown">
                               <li style="background-color: #2A2A2A"><a href="bookinput"><font
                                     color="#E8CEC2"; >도서 추가</font></a></li>
-                              <li style="background-color: #2A2A2A"><a href="#"><font
-                                    color="#E8CEC2"; >관리자페이지2</font></a></li>
+                              <li style="background-color: #2A2A2A"><a href="manager.book"><font
+                                    color="#E8CEC2"; >전체 도서 대출 현황</font></a></li>
                            </ul></li>
                      </c:when>
                   </c:choose>

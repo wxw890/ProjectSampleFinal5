@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="utf-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -7,11 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3>´ë¿© Ã¥ ¸®½ºÆ®</h3>
+<h3>ëŒ€ì—¬ ì±… ë¦¬ìŠ¤íŠ¸</h3>
 <table border="1">
 	 
 	<tr>
-		<td>¼ø¼­</td><td>µî·Ï¹øÈ£</td><td>Á¦¸ñ</td><td>Ã¥ ¹Ý³³ÀÏ</td><td>´ë¿©ÀÚ</td>
+		<td>ìˆœì„œ</td><td>ë“±ë¡ë²ˆí˜¸</td><td>ì œëª©</td><td>ì±… ë°˜ë‚©ì¼</td><td>ëŒ€ì—¬ìž</td>
 	</tr>
 	<c:forEach items="${list}" var="dto" varStatus="status">
 	<tr>
@@ -26,12 +26,12 @@
 </table>
 
 
-<h3>¿¹¾à Ã¥ ¸®½ºÆ®</h3>
+<h3>ì˜ˆì•½ ì±… ë¦¬ìŠ¤íŠ¸</h3>
 <form action="resbookcancel.book" method="get">
 <table border="1">
 	 
 	<tr>
-		<td>¼ø¼­</td><td>µî·Ï¹øÈ£</td><td>Á¦¸ñ</td><td>Ã¥ ¿¹¾à ¸¶Áö¸·³¯</td><td>´ë¿©ÀÚ</td>
+		<td>ìˆœì„œ</td><td>ë“±ë¡ë²ˆí˜¸</td><td>ì œëª©</td><td>ì±… ì˜ˆì•½ ë§ˆì§€ë§‰ë‚ </td><td>ëŒ€ì—¬ìž</td>
 	</tr>
 	<c:forEach items="${lists}" var="dto" varStatus="status">
 	<tr>
@@ -44,7 +44,7 @@
 	</tr>
 	</c:forEach>
 </table>
-<input type="submit" value="¿¹¾àÃë¼Ò" /> 
+<input type="submit" value="ì˜ˆì•½ì·¨ì†Œ" /> 
 
 </form>
 

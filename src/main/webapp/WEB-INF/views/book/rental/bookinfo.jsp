@@ -40,7 +40,7 @@
 <body>
 <h2>파일 이름: ${dto.getBook_img()}</h2>
 <div>
-<img width="100" height="100" src="images/bookimage/${dto.getBook_img()}">
+<img width="100" height="100" src="upload/${dto.getBook_img()}">
 </div>
 
 

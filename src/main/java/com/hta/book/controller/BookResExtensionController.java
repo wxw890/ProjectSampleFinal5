@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.hta.book.repository.BookDto;
+
 import com.hta.book.repository.BookandRentalDto;
 import com.hta.book.repository.RentalInfoDto;
 import com.hta.book.service.BookService;
@@ -35,17 +36,18 @@ public class BookResExtensionController {
 	
 	//���� ���ó��
 	@RequestMapping("/rescan.book")
-	public String reshandle(int book_num, HttpSession session){
+	public String reshandle(int book_num, HttpSession session,int res_num){
 		
 		String member_email = (String)session.getAttribute("email");
-		bookService.bookrescancel(book_num, member_email);
+		bookService.bookrescancel(book_num, member_email,res_num);
 	
 		return "redirect:myrental.book";
 		
 	}
 	//���� �� �뿩ó��
 	@RequestMapping("/resrental.book")
-	public  ModelAndView resrentalhandle(@ModelAttribute RentalInfoDto infodto, BookDto dto,int book_num, BookandRentalDto joindto, HttpSession session, HttpServletRequest req){
+	public  ModelAndView resrentalhandle(@ModelAttribute RentalInfoDto infodto, BookDto dto,int book_num, BookandRentalDto joindto, HttpSession session, HttpServletRequest req
+			){
 		ModelAndView mav = new ModelAndView("redirect:myrental.book");
 	
 		
@@ -53,6 +55,7 @@ public class BookResExtensionController {
 		session.setAttribute("member_email", member_email); //session�� �̸��ϰ� ����.
 		infodto.setMember_email(member_email);
 		infodto.setBook_num(book_num);
+
 		bookService.bookresrental(dto, infodto,book_num);
 
 		
