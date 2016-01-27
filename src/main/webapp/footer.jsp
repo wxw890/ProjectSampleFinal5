@@ -33,7 +33,7 @@ Modernizr.load({
          <div class="large-12 twelve columns">
             <div class="row">
                <div class="large-4 four small-12 columns">
-                  <div class="contact">
+                  <div class="contact" style="margin-right: 30px;">
                      <h3>contacts us</h3>
                      <a href="http://www.jhta.co.kr/"><img src="images/HTA-2.png"
                         alt="">
@@ -62,8 +62,7 @@ Modernizr.load({
                   <div class="information">
                      <h3>information</h3>
                      <ul>
-                        <li><a href="#">lorem ipsum dolor sit esmut sint
-                              officia</a></li>
+                        <li><a href="#" onclick="window.open('http://www.q-net.or.kr/' , 'sample' , 'width=700,height=600' , 'location=no' , 'toolbar=no' )"> <h3>자격의 모든것Q-Net</h3></a></li>
                         <li><a href="#">phasellus etres solris nobita cumque
                               minus</a></li>
                         <li><a href="#">lorem ipsum dolor sit esmut sint
@@ -84,7 +83,7 @@ Modernizr.load({
                   </div>
                </div>
                <div class="large-4 four small-12 columns">
-                  <div class="quick-contacts">
+                  <div class="quick-contacts" style="margin-left: 30px">
                      <h3>quick contacts</h3>
                      <form action="#" method="post" class="quick-contact-form">
                         <table>
@@ -164,6 +163,7 @@ $(document).ready(function () {
     });
 });
 </script>
+
 </body>
 </html>
 

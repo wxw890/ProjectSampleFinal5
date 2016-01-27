@@ -3,12 +3,12 @@
 <%@include file="/header.jsp"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-
-<h2>자유 글수정 페이지</h2>
+<div align="center">
+<h2>자유게시판</h2>
 <form:form method="POST" action="upload2.spring" enctype="multipart/form-data"><!-- enctype="multipart/form-data"란 데이터를 여러개로 나눠서 전송하겠다는 뜻(파일 업로드할때 필요하다 꼭) -->
 	<input type="hidden" name="b_num" value="${dto['b_num'] }"/><!--업로드시 위에 업데이트할때 hidden으로 b_num값을 넘겨야하므로 -->																				<!-- multipart로 하면 req로 받아올수 없다. -->
 															<!--업로드할때  hidden으로 b_num값을 넘겨서 dto값을 찾아서 다시 update.jsp로 올때 dto값을 유지해 있어야한다. 그래야 온전하게 업데이트가 가능하다.  -->
-	파일:<input type="file" name="files"/><br/><br/>
+	<input type="file" name="files" style="margin-left:920px"/><br/><br/>
 	<input type="submit" value="업로드"/>
 </form:form>
 <c:if test="${path!=null}">
@@ -25,6 +25,6 @@
 	<input type="submit" value="저장"/>
 	<input type="button" value="리스트 페이지로 이동"/>
 </form>
-
+</div>
 
 <%@include file="/footer.jsp"%>

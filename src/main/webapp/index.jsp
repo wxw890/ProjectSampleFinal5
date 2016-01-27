@@ -53,9 +53,9 @@ body{background-image: linear-gradient(0deg, transparent 0%, transparent 9px, rg
       <section class="slider">
         <div class="flexslider">
           <ul class="slides">
-            <li style="width: 400px; height: 300px;"><img src="images/sh3.jpg" ></a></li>
-            <li style="width: 400px; height: 300px;"><img src="images/sh1.jpg" ></li>
-            <li style="width: 400px; height: 300px;"><img src="images/sh2.jpg" ></li>
+            <li style="width: 400px; height: 300px;"><img src="images/java2.jpg" onclick="window.open('http://www.javaprogrammingforums.com/' , 'sample' , 'width=700,height=600' , 'location=no' , 'toolbar=no' )" ></a></li>
+            <li style="width: 400px; height: 300px;"><img src="images/java1.jpg" onclick="window.open('https://www.youtube.com/watch?v=yaqnVTBz1As&list=PLieE0qnqO2kTyzAlsvxzoulHVISvO8zA9&index=2' , 'sample' , 'width=700,height=600' , 'location=no' , 'toolbar=no' )"></li>
+            <li style="width: 400px; height: 300px;"><img src="images/java3.jpg" onclick="window.open('http://www.javaproject.kr/Home' , 'sample' , 'width=700,height=600' , 'location=no' , 'toolbar=no' )"></li>
           </ul>
         </div>
       </section>

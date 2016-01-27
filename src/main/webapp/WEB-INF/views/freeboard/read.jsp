@@ -15,7 +15,7 @@
 </script>
 
 <div align="center">
-	<h2>공지 글보기페이지</h2>
+	<h2>공지사항</h2>
 	<table border="1">
 		<tbody>
 		<tr>
