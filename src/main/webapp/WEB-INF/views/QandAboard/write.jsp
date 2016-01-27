@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@include file="/header.jsp"%>
 
-<h2>글쓰기 페이지</h2>
+<h2>Q&A 글쓰기 페이지</h2>
 <form action="write.board2" method="post">
 	제목:<input type="text" name="b_title" style="width:500px;height:50px;"/><br/><br/>
 	내용:<textarea cols="50" name="b_content" style="width:500px;height:350px;"></textarea><br/><br/>

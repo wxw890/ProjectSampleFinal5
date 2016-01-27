@@ -82,7 +82,7 @@
 
          <p class="calendarP">
             <label><h3>예약하실 날짜를 선택해 주세요</h3></label> 
-            <input type="date"   name="reservation_date" id="day" class="calendar" style="width: 300px; margin-left: 600px;"/>
+            <input type="date"   name="reservation_date" id="day" class="calendar" style="width: 300px; margin-left: 790px;"/>
                
          </p>
             <hr />

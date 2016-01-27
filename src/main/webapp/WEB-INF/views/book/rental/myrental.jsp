@@ -14,7 +14,7 @@
 	function returnbook(){
 		var sal = document.getElementById("oversal").value;
 		alert("연체료는 "+sal+"원입니다.")
-		alert("반납처리한다.")
+		alert("반납처리합니다.")
 		
 	}
 	//연장처리
@@ -34,7 +34,7 @@
 		var rental = document.getElementById("rental").value;
 		if(rental <= 4){
 			
-			alert("대여처리한다.")
+			alert("대여처리합니다.")
 			location.href="resrental.book?book_num="+num;
 		}
 		else{
