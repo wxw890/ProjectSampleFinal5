@@ -29,6 +29,6 @@
 			</label>
 		</p>
 		
-		<input type="submit" value="로그인 하기"/>
+		<input type="submit" value="변경하기"/>
 	</form>
 <%@include file="/footer.jsp"%>

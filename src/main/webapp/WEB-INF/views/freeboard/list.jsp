@@ -201,7 +201,7 @@ function check(){
 			</table>
 		<!-- 찾기 기능 -->	
 			<BR>
-<form action="list.board1?page=0" name="search" method="GET">
+<form action="list.board11?page=0&bool=false" name="search" method="GET">
 	<table border=0 width=527 align=center cellpadding=4 cellspacing=0>
 	<tr>
 		<td align=center valign=bottom>

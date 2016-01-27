@@ -62,15 +62,31 @@ public class StudyroomManager {
 		System.out.println("Manager reservation : "+ studyroomdto.getReservation_date());
 		System.out.println("Manager reservattion num : "+ studyroomdto.getReservation_num());
 		System.out.println("Manager time : "+ studyroomdto.getReservation_time());
-		
 		SqlSession session = sqlFactory.openSession();
+		try{
 		session.insert("resWrite", studyroomdto);//stutyroomMapper.xml에 id가 resWrite인 메서드에 studyroomdto를 파라미터 값으로 넘겨준다.
 		session.commit();//insert, update, delete는  commit()을 해줘야 완성이 된다.
+		}
+		catch(Exception err){
+			System.out.println("resWrite"+ err);
+		}
+		finally {
+			session.close();
+		}
+		
 	}
 	public static List findByRes_num(String member_email){
 		SqlSession session = sqlFactory.openSession();
 		List list = null;
+		try{
 		list = session.selectList("findByRes_num", member_email);
+		}
+		catch(Exception err){
+			System.out.println("findByRes_num"+ err);
+		}
+		finally {
+			session.close();
+		}
 		return list;
 	}
 	public static StudyroomDto findBySameResurvation(StudyroomDto studyroomdto){
@@ -81,16 +97,33 @@ public class StudyroomManager {
 		System.out.println("Manager reservation : "+ studyroomdto.getReservation_date());
 		System.out.println("Manager reservattion num : "+ studyroomdto.getReservation_num());
 		System.out.println("Manager time : "+ studyroomdto.getReservation_time());
+		StudyroomDto studyroomdto2 = new StudyroomDto();
 		SqlSession session = sqlFactory.openSession();
-		StudyroomDto studyroomdto2 = session.selectOne("findBySameResurvation", studyroomdto);
+		try{
+		 studyroomdto2 = session.selectOne("findBySameResurvation", studyroomdto);
+		}
+		catch(Exception err){
+			System.out.println("findBySameResurvation"+ err);
+		}
+		finally {
+			session.close();
+		}
 		return studyroomdto2;
 	}
 	
 	public static void resDelete(int reservation_num){
 		SqlSession session = sqlFactory.openSession();
+		try{
 		session.delete("resDelete", reservation_num);
 		System.out.println("스터디 삭제 매니저까지오는 넘버값!!!"+reservation_num);
 		session.commit();
+		}
+		catch(Exception err){
+			System.out.println("resDelete"+ err);
+		}
+		finally {
+			session.close();
+		}
 	}
 	
 	

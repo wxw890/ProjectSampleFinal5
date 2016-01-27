@@ -98,4 +98,64 @@ public class ListController{
 	
 	
 	
+	
+	
+	
+	
+	@RequestMapping("/list.board11")
+	public ModelAndView pageHand(HttpSession session, @ModelAttribute BoardDto dto, HttpServletRequest req, HttpServletResponse resp) throws UnsupportedEncodingException{
+		req.setCharacterEncoding("UTF-8");
+		ModelAndView mav = new ModelAndView("/freeboard/list");
+		String keyWord = req.getParameter("keyWord"); //keyWord와 keyField값을 가져온다.
+		String keyField = req.getParameter("keyField");
+		System.out.println("freeboard list Get방식");
+		dto.setKeyField(keyField);//dto에 집어넣는다.
+		dto.setKeyWord(keyWord);
+		String session_email = (String) session.getAttribute("email");
+		System.out.println("무엇이 무엇이???"+dto.getB_content());
+		System.out.println("****로그인된 아이디는??"+session_email);
+		
+		req.setAttribute("dto", dto);//jsp에 사용하기위해 request로 저장해둔다.
+		
+		List list = null;
+		try {
+			
+			
+				
+				if(keyWord == null){//키워드 검색 값이 없을시
+					System.out.println("getList실행!!!!!!!!!");
+					list = boardService.getList();//getList()함수가 list 결과값을 가지고 온다.
+					mav.addObject("email", session_email);
+					mav.addObject("list", list);
+					
+					
+				}
+				else{//키워드 검색 값이 있을시
+					System.out.println("findKeyword실행!!!!!!!!!");
+					list = boardService.findKeyword(dto);//키워드 검색 찾기
+					mav.addObject("email", session_email);
+					mav.addObject("list", list);
+				}
+			
+		
+		
+		}
+		catch(Exception err){
+			if(list == null || list.isEmpty()){
+				System.out.println("list가 null이면 실행 부탁드립니다.");
+				mav.addObject("email", session_email);
+				mav.addObject("list", null);
+				
+			}
+			
+			System.out.println("First ListController:pageHandler():" + err);
+			
+		}
+		return mav;
+	}
+	
+	
+	
+	
+	
 }

@@ -35,7 +35,7 @@ Modernizr.load({
 
 
 <!-- 이부분이 약관동의 부분 -->
- <h2 align="center">가입 약관 동의</h2>
+ 
    <div class="orange_box">
       
       

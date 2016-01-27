@@ -167,10 +167,6 @@ public class BoardServiceImpl implements BoardService {
 		return BoardManager.findKeyword(dto);
 	}
 	
-	public void writeFile(MultipartFile file, String path, String filename) throws IOException{
-		
-		BoardManager.writeFile(file, path, filename);
-		
-	}
+
 
 }

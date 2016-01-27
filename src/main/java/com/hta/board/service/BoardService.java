@@ -36,7 +36,6 @@ public interface BoardService {
 	public void posupdateall(BoardDto dto);
 	
 	public void increaseCount(BoardDto dto);
-	
-	public void writeFile(MultipartFile file, String path, String filename) throws IOException;
+
 }
 
